@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import logo from "../images/Logo .svg";
 
 const Nav = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -8,16 +9,14 @@ const Nav = () => {
     }
 
 
-
-
     return (
-        <nav>
-            <a href='/'>
+        <nav className={`navbar ${menuOpen ? "open" : ""}`}>
+            <a href='/' className="logo">
                 <img src={logo} alt='logo'></img>
             </a>
 
             {/* mobile navbar */}
-            <div>
+            <div className="menu-icon" onLcick={toggleMeu}>
                 <div className='bar'></div>
                 <div className='bar'></div>
                 <div className='bar'></div>
@@ -25,30 +24,28 @@ const Nav = () => {
 
 
             {/* nav items */}
-            <ul>
+            <ul className={`nav-links ${menuOpen ? "visible" : ""}`}>
                 <li>
-                    <a href="/">HOME</a> 
+                    <a href="/">HOME</a>
                 </li>
                 <li>
-                    <a href="/">ABOUT</a> 
+                    <a href="/">ABOUT</a>
                 </li>
                 <li>
-                    <a href="/">MENU</a> 
+                    <a href="/">MENU</a>
                 </li>
                 <li>
-                    <a href="/">RESERVATIONS</a> 
+                    <a href="/">RESERVATIONS</a>
                 </li>
                 <li>
-                    <a href="/">ORDER ONLINE</a> 
+                    <a href="/">ORDER ONLINE</a>
                 </li>
                 <li>
-                    <a href="/">LOGIN</a> 
+                    <a href="/">LOGIN</a>
                 </li>
             </ul>
-
-
-
-            
         </nav>
     )
 }
+
+export default Nav;

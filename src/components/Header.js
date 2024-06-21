@@ -1,1 +1,5 @@
-<img src="./images/Logo.svg"></img>
+
+const Header = () => {
+
+}
+export default Header;
