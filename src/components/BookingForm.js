@@ -12,7 +12,7 @@ const BookingForm = (props) => {
         
     }
 
-    const handlechange = (e) = {
+    const handlechange = (e) => {
         setDate(e);
         props.dispatch(e);
     }

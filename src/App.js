@@ -5,13 +5,17 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import BookingForm from './components/BookingForm';
+import Menu from './components/Menu';
 
 function App() {
   return (
     <>
     <Nav/>
+    <Header/>
+    <BookingForm/>
     <Main/>
     <Menu/>
+    <Footer/>
     </>
   );
 }

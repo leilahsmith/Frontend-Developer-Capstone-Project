@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
-import Header from '.Header';
-import Booking from '.Booking';
+import Header from './Header';
+import Booking from './Booking';
 import ConfirmedBooking from './ConfirmedBooking';
 
 
@@ -40,7 +40,7 @@ const Main = () => {
     
     function updateTimes(state, date)
  {
-    return {availableTimes:fetchAPI(newDate())}
+    return {availableTimes:fetchAPI(new Date())}
  }
 
  const navigate = useNavigate();
