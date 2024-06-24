@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import BookingForm from './BookingForm';
 
-const Booking = () => {
+const Booking = (props) => {
     return (
-        <div>
-
-        </div>
+       
+        <BookingForm availableTimes={props.availableTimes} dispatch={props.dispatch} submitForm={props.submitForm}/>
+        
     )
 }
 
