@@ -38,13 +38,8 @@ const BookingForm = (props) => {
                         </div>
                         {/* for number of guests*/}
                         <div>
-                        <label htmlFor='book-guests'>Number of Guests:</label>
-                            <select id="book-guests" min='1' value={guests} onChange={(e) => setGuests(e.target.value)}>
-                            <option value="">Select a Time</option>
-                                {
-                                    props.availableTimes.availableTimes.map(availableTimes => {return <option key={availableTimes}>{availableTimes}</option>})
-                                }
-                            </select>
+                            <label htmlFor="book-guests">Number of Guests:</label>
+                            <input id="book-guests" min="1" value={guests} onChange={(e) => {setGuests(e.target.value)}} type={"number"} placeholder={0} max={10} required></input>
                         </div>
                         {/* for occasion */}
                         <div>

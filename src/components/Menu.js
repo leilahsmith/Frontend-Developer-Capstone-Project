@@ -5,21 +5,21 @@ import Swal from 'sweetalert2';
 const Menu = () => {
 
     const handleOrder = (id) => {
-        console.log(id, "id is clicked");
+        console.log(id);
         Swal.fire({
-            title: "Are you sure?",
-            text: "You won't be able to revert this!",
+            title: "Would you like to confirm your order?",
+            text: "You will not be able to revert this!",
             icon: "warning",
-            showCancelButton: true,
+            showCancelButton: false,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, order it!"
+            confirmButtonText: "Yes, submit order!"
           }).then((result) => {
             if (result.isConfirmed) {
               Swal.fire({
                 title: "Ordered!",
                 text: "Your order has been processed.",
-                icon: "success"
+                icon: "Success."
               });
             }
           });
@@ -33,24 +33,23 @@ const Menu = () => {
             </div>
         
 
-            <div className='cards'>
-                {
-                    recipes.map(recipe => 
-                    <div key={recipe.id} className='menu-items'>
-                        <img src={recipe.image} alt=''/>
-                            <div className='menu-content'>
-                                <div className='heading'> 
-                                    <h5>{recipe.title}</h5>
-                                    <p>{recipe.price}</p>
-                                </div>
-                            </div>
-                        <p>{recipe.description}</p>
-                        <button className='orderBtn' onClick={() => handleOrder(recipe.id)}>Order Now</button>
-                    </div>)
-                }
+            <div className="cards">
+        {recipes.map((recipe) => (
+          <div key={recipe.id} className="menu-items">
+            <img src={recipe.image} alt="" />
+            <div className="menu-content">
+              <div className="heading">
+                <h5>{recipe.title}</h5>
+                <p>${recipe.price}</p>
+              </div>
+              <p>{recipe.description}</p>
+              <button className="orderbtn" onClick={() => handleOrder(recipe.id)}>Order Now</button>
             </div>
-        </div>
-    )
-}
+          </div>
+        ))}
+      </div>
+    </div>
+    );
+};
 
 export default Menu;

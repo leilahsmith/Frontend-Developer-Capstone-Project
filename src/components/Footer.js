@@ -24,11 +24,11 @@ const Footer = () => {
 
                 <div>
                     <h3>Contact</h3>
-                    <ul>
-                        <li>Address: <br/> 123 Address Way, Chicago, IL</li>
-                        <li>Phone: <br/> +1 (317) 123-1234</li>
-                        <li>Email: <br/> clientservices@littlelemon.com</li>
-                    </ul>
+                    <p>123 Address Way, <br>
+                    </br>Chicago, IL 60131<br/>
+                    (773) 123-1234<br/>
+                    clientservices@littlelemon.com
+                    </p>
                 </div>
 
                 <div>
