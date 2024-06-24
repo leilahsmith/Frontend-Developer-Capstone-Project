@@ -8,13 +8,11 @@ import BookingForm from './components/BookingForm';
 
 function App() {
   return (
- <>
+    <>
     <Nav/>
-    <Header/>
-    <BookingForm/>
-    <Main></Main>
-    <Footer></Footer>
-  </>
+    <Main/>
+    <Menu/>
+    </>
   );
 }
 
